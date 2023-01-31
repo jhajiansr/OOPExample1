@@ -1,0 +1,76 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{1F127F0E-9B40-4231-A47F-9112FCE555AB}</ProjectGuid>
+    <OutputName>OOPExample1</OutputName>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OOPExample1</RootNamespace>
+    <PreserveCase>True</PreserveCase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <StartupObject>TestBankAccounts</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <MaxError>100</MaxError>
+    <SourceFormat>Variable</SourceFormat>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <MaxError>100</MaxError>
+    <SourceFormat>Variable</SourceFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="MicroFocus" />
+    <Import Include="MicroFocus.COBOL" />
+    <Import Include="MicroFocus.COBOL.DataTypes" />
+    <Import Include="MicroFocus.COBOL.DataTypes.Util" />
+    <Import Include="MicroFocus.COBOL.Debugging" />
+    <Import Include="MicroFocus.COBOL.FileHandler" />
+    <Import Include="MicroFocus.COBOL.Info" />
+    <Import Include="MicroFocus.COBOL.Program" />
+    <Import Include="MicroFocus.COBOL.Runtime" />
+    <Import Include="MicroFocus.COBOL.Runtime.Attributes" />
+    <Import Include="MicroFocus.COBOL.Runtime.Common" />
+    <Import Include="MicroFocus.COBOL.Runtime.Common.ByteStream" />
+    <Import Include="MicroFocus.COBOL.Runtime.Drawing" />
+    <Import Include="MicroFocus.COBOL.Runtime.Printing" />
+    <Import Include="MicroFocus.COBOL.Runtime.ScreenIO" />
+    <Import Include="MicroFocus.COBOL.Runtime.SEE" />
+    <Import Include="MicroFocus.COBOL.Tracing" />
+    <Import Include="System" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Text" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankAccount.cbl" />
+    <Compile Include="Myclass.cbl" />
+    <Compile Include="TestBankAccountClass.cbl" />
+    <Compile Include="TestMyClass.cbl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
